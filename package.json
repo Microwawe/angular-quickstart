@@ -1,6 +1,6 @@
 {
 	"name": "angular-quickstart",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
@@ -10,7 +10,7 @@
 		"lint": "ng lint",
 		"watch": "ng test --browser ChromeHeadless",
 		"e2e": "ng e2e",
-		"release": "standard-version && git push — follow-tags origin master && npm publish"
+		"release": "standard-version && git push -- follow-tags origin master && npm publish"
 	},
 	"private": true,
 	"dependencies": {
