@@ -1,27 +1,41 @@
-# AngularQuickstart
+# Angular Quickstart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+This project is supposed to help you to get a new project set up easier. 
 
-## Development server
+The base files were generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0 with the following command:
+```
+ng new projectName --style=scss --routing
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## What was added?
 
-## Code scaffolding
+- [ ] Shared module
+- [ ] Core module
+  - All services which have to have one and only one instance per application (singleton services) should be implemented here. Typical example can be authentication service or user service.
+- [ ] Lazy loading
+- [x] Service worker
+- [ ] 404 page
+- [ ] Environment variables
+- [x] Simplified relative paths
+  - [x] @env
+  - [x] @shared
+  - [x] @core
+  - [x] styles
+- [x] Scss
+  - [x] reset.scss
+  - [x] variables
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Usage
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Please make sure to update tests as appropriate.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
