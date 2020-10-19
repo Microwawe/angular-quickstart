@@ -1,3 +1,6 @@
+![GitHub package.json version](https://img.shields.io/github/package-json/v/Microwawe/angular-quickstart) [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts) [![GitHub license](https://img.shields.io/github/license/Microwawe/angular-quickstart)](https://github.com/Microwawe/angular-quickstart)
+
+
 # Angular Quickstart
 
 This project is supposed to help you to get a new project set up easier. 
