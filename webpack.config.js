@@ -10,19 +10,26 @@ module.exports = config => {
 	console.log(`Using '${config.mode}' mode`);
 	config.module.rules.push({
 		test: /\.scss$/,
-		loader: 'postcss-loader',
-		options: {
-			postcssOptions: {
-				ident: 'postcss',
-				syntax: 'postcss-scss',
-				plugins: [
-					require('postcss-import'),
-					require('tailwindcss'),
-					require('autoprefixer'),
-					...(config.mode === 'production' ? [purgecss] : []),
-				],
+		use: [
+			{
+				loader: 'postcss-loader',
+				options: {
+					postcssOptions: {
+						ident: 'postcss',
+						syntax: 'postcss-scss',
+						plugins: [
+							require('postcss-import'),
+							require('tailwindcss'),
+							require('autoprefixer'),
+							...(config.mode === 'production' ? [purgecss] : []),
+						],
+					},
+				},
 			},
-		},
+			{
+				loader: 'sass-loader',
+			},
+		],
 	});
 	return config;
 };

@@ -12,21 +12,16 @@ ng new projectName --style=scss --routing
 
 ## What was added?
 
-- [ ] Shared module
-- [ ] Core module
+- [x] [TailwindCSS](https://tailwindcss.com/)
+- [x] Dynamic light and dark themes
+- [x] [CoreUI Icons](https://icons.coreui.io/icons/)
+- [x] Shared module
+- [x] Core module
   - All services which have to have one and only one instance per application (singleton services) should be implemented here. Typical example can be authentication service or user service.
-- [ ] Lazy loading
+- [x] Lazy loading
 - [x] Service worker
-- [ ] 404 page
-- [ ] Environment variables
-- [x] Simplified relative paths
-  - [x] @env
-  - [x] @shared
-  - [x] @core
-  - [x] styles
-- [x] Scss
-  - [x] reset.scss
-  - [x] variables
+
+
 ## Installation
 
 
