@@ -10,8 +10,18 @@ module.exports = {
 	},
 	purge: [],
 	theme: {
-		fontFamily: {
-			sans: ['Montserrat', 'Helvetica', 'sans-serif'],
+		extend: {
+			fontFamily: {
+				mont: ['Montserrat', 'sans-serif'],
+				fira: ['"Fira Sans"', 'Helvetica', 'sans-serif'],
+				lato: ['Lato', 'Helvetica', 'sans-serif'],
+			},
+			fontSize: {
+				'7xl': '5.25rem',
+				'8xl': '6.5rem',
+				'9xl': '8rem',
+				'10xl': '10rem',
+			},
 		},
 	},
 	variants: {
