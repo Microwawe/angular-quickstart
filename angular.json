@@ -15,8 +15,11 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "@angular-builders/custom-webpack:browser",
 					"options": {
+						"customWebpackConfig": {
+							"path": "./webpack.config.js"
+						},
 						"outputPath": "dist/angular-quickstart",
 						"index": "src/index.html",
 						"main": "src/main.ts",
@@ -29,12 +32,15 @@
 							"src/manifest.webmanifest"
 						],
 						"styles": [
+							"src/assets/coreui/free/free-icons.scss",
+							"src/assets/coreui/brand/brand-icons.scss",
+							"src/assets/fonts/FiraSans/fira-sans.scss",
+							"src/assets/fonts/Lato/lato.scss",
+							"src/assets/fonts/Montserrat/montserrat.scss",
 							"src/styles/styles.scss"
 						],
 						"stylePreprocessorOptions": {
-							"includePaths": [
-								"src/styles"
-							]
+							"includePaths": ["src/styles"]
 						},
 						"scripts": []
 					},
@@ -72,8 +78,11 @@
 					}
 				},
 				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular-builders/custom-webpack:dev-server",
 					"options": {
+						"customWebpackConfig": {
+							"path": "./webpack.config.js"
+						},
 						"browserTarget": "angular-quickstart:build"
 					},
 					"configurations": {
@@ -100,13 +109,9 @@
 							"src/assets",
 							"src/manifest.webmanifest"
 						],
-						"styles": [
-							"src/styles/styles.scss"
-						],
+						"styles": ["src/styles/styles.scss"],
 						"stylePreprocessorOptions": {
-							"includePaths": [
-								"src/styles"
-							]
+							"includePaths": ["src/styles"]
 						},
 						"scripts": []
 					}
@@ -119,9 +124,7 @@
 							"tsconfig.spec.json",
 							"e2e/tsconfig.json"
 						],
-						"exclude": [
-							"**/node_modules/**"
-						]
+						"exclude": ["**/node_modules/**"]
 					}
 				},
 				"e2e": {
