@@ -7,16 +7,9 @@
 		"build": "ng build",
 		"build:prod": "ng build --target production --build-optimizer --vendor-chunk --output-hashing all",
 		"test": "ng test --browser ChromeHeadless --single-run",
-		"lint": "gts lint",
 		"watch": "ng test --browser ChromeHeadless",
 		"e2e": "ng e2e",
-		"release": "standard-version && git push --follow-tags origin master && npm publish",
-		"clean": "gts clean",
-		"compile": "tsc",
-		"fix": "gts fix",
-		"prepare": "npm.cmd run compile",
-		"pretest": "npm.cmd run compile",
-		"posttest": "npm.cmd run lint"
+		"release": "standard-version && git push --follow-tags origin master && npm publish"
 	},
 	"private": true,
 	"dependencies": {
@@ -35,7 +28,7 @@
 	},
 	"devDependencies": {
 		"@angular-builders/custom-webpack": "^10.0.1",
-		"@angular-devkit/build-angular": "~0.1001.0",
+		"@angular-devkit/build-angular": "^0.1100.7",
 		"@angular-eslint/builder": "0.5.0-beta.4",
 		"@angular-eslint/eslint-plugin": "0.5.0-beta.4",
 		"@angular-eslint/eslint-plugin-template": "0.5.0-beta.4",
@@ -71,7 +64,7 @@
 		"protractor": "~7.0.0",
 		"sass-loader": "^10.0.5",
 		"standard-version": "^9.0.0",
-		"tailwindcss": "^1.9.5",
+		"tailwindcss": "^2.0.2",
 		"ts-node": "~8.3.0",
 		"typescript": "^4.0.3"
 	}
